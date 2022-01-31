@@ -37,4 +37,4 @@ steps:
   inputs:
     containerRegistry: 'MyDockerHubConnection'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/AzureDockerfile'
