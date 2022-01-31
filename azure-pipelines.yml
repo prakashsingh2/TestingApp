@@ -29,3 +29,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'warfile'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'MyDockerHubConnection'
+    command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'MyDockerHubConnection'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
